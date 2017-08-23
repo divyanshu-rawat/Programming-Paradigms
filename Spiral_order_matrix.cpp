@@ -19,28 +19,49 @@ void spiralPrint(int m, int n, int a[R][C])
     // printf("%d\n",m);
     // printf("%d\n",n);
 
+    while( k < m && l < n ){
+
+
     for(i=k ; i<n ; i++){
     	printf("%d \t",a[k][i]);
     }
 
-    printf("\n");
+    k++;
+
+    // printf("\n");
     
     for(i=k; i<m; i++){
     	printf("%d \t",a[i][n-1]);
     }
 
-    printf("\n");
+    n--;
 
-    for(i= 0 ; i < C ; i++){
-    	printf("%d \t",a[m-1][n - 1 - i]);
+    // printf("\n");
+
+     if ( k < m)
+        {
+            for (i = n-1; i >= l; --i)
+            {
+                printf("%d \t", a[m-1][i]);
+            }
+            m--;
+        }
+    
+    // printf("\n");
+
+    if( l < n){
+
+    	for(i = m - 1 ; i >= k ; i--){
+
+    		printf("%d\t ", a[i][l]);
+    	}
+    	l++;
+
+
     }
 
-    printf("\n");
-
-    for(i= 0 ; i < R - 1 ; i++){
-    	printf("%d \t",a[m - 1 - i][l]);
-    }
-
+   
+}
      printf("\n");
 
 

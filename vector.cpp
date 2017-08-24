@@ -24,29 +24,32 @@ int main(){
         vector_one.push_back(i);
 
 
-    cout << "Output of begin and end\t:\t";
-
-    for (i = vector_one.begin(); i < vector_one.end(); i++)
-        cout << *i << '\t';
-
-    cout << '\n';
-
-    cout << "Output of rbegin and rend: \n";
-    for (ir = vector_one.rbegin(); ir < vector_one.rend(); ++ir)
-        cout << *ir << '\n';
+    
 
 
-    vector <int> g1;
+    // cout << "Output of begin and end\t:\t";
+
+    // for (i = vector_one.begin(); i < vector_one.end(); i++)
+    //     cout << *i << '\t';
+
+    // cout << '\n';
+
+    // cout << "Output of rbegin and rend: \n";
+    // for (ir = vector_one.rbegin(); ir < vector_one.rend(); ++ir)
+    //     cout << *ir << '\n';
+
+
+    // vector <int> g1;
  
-    for (int i = 1; i <= 9; i++)
-        g1.push_back(i);
+    // for (int i = 1; i <= 9; i++)
+    //     g1.push_back(i);
  
-    cout << "Size : " << g1.size();
-    cout << "\nCapacity : " << g1.capacity();
-    cout << "\nMax_Size: " << g1.max_size();
-    cout << "\n";
+    // cout << "Size : " << g1.size();
+    // cout << "\nCapacity : " << g1.capacity();
+    // cout << "\nMax_Size: " << g1.max_size();
+    // cout << "\n";
 
-    return 0;
+    // return 0;
 
 }
 

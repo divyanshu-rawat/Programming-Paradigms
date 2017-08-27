@@ -59,9 +59,12 @@ int segregate(int arr[],int size){
 }
 
 int findMissingPositive(int arr[],int size){
-//Mark arr[i] visited by changing sign of arr[arr[i] - 1 ] to negative;
+// //Mark arr[i] visited by changing sign of arr[arr[i] - 1 ] to negative;
 
     for(int i = 0; i < size; i++){
+
+      // cout << "\n";
+      // cout << arr[abs(arr[i]) - 1];
 
         if(abs(arr[i] - 1) < size && arr[abs(arr[i]) - 1] > 0){
           arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1];
@@ -79,8 +82,8 @@ int findMissingPositive(int arr[],int size){
 }
 
  
-/* Find the smallest positive missing number in an array that contains
-  both positive and negative integers */
+// /* Find the smallest positive missing number in an array that contains
+//   both positive and negative integers */
 int findMissing(int arr[], int size)
 {
    // First separate positive and negative numbers
@@ -95,9 +98,17 @@ int findMissing(int arr[], int size)
 }
 
 
+/**
+ * @input A : Integer array
+ * @input n1 : Integer array's ( A ) length
+ * 
+ * @Output Integer
+ */
+
+
 int main()
 {
-  int arr[] = {1, 10, 2, -10, -20};
+  int arr[] = {7,9,10};
   int arr_size = sizeof(arr)/sizeof(arr[0]);
   int missing = findMissing(arr, arr_size);
   printf("The smallest positive missing number is %d \n", missing);

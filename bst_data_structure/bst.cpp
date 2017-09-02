@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-
-struct Node* tree{
+struct Node{
 	int data;
 	struct Node* left;
 	struct Node* right;
-}
+};
 
 struct Node* createNode(int data){
 
@@ -13,8 +13,9 @@ struct Node* createNode(int data){
 	new_node->left = NULL;
 	new_node->right = NULL;
 	new_node->data = data;
-	return Node;
+	return new_node;
 }
+
 
 int main(){
 
@@ -23,5 +24,8 @@ int main(){
 	root->right = createNode(3);
 
 	root->left->left = createNode(4);
+
+	print_tree(root);
+
 	return 0;
 }

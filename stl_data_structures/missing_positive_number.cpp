@@ -63,9 +63,9 @@ int findMissingPositive(int arr[],int size){
 
     for(int i = 0; i < size; i++){
 
-      // cout << "\n";
-      // cout << arr[abs(arr[i]) - 1];
 
+      // Algorithm !
+      
         if(abs(arr[i] - 1) < size && arr[abs(arr[i]) - 1] > 0){
           arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1];
         }

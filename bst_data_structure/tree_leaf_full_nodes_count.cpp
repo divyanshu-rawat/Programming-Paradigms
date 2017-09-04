@@ -94,18 +94,48 @@ int count_full_nodes(struct Node* root){
 
 	int boolean;
 
-	int left = count_full_nodes(root->left);
-	int right = count_full_nodes(root->right);
-
 	if(root->right && root->left)
 		boolean = 1;
 	else
 		boolean = 0;
 
+	int left = count_full_nodes(root->left);
+	int right = count_full_nodes(root->right);
+
+
 	return left + right + boolean;
 }
 
+int height_of_tree(struct Node* root){
 
+	if(root->left == NULL && root->right == NULL)
+		return 0;
+	if(root == NULL)
+		return 0;
+
+	
+	int boolean;
+	if(root->right && root->left)
+		boolean = 1;
+	else
+		boolean = 0;
+
+
+	int left = height_of_tree(root->left);
+	int right = height_of_tree(root->right);
+
+	if(left > right)
+		return boolean + left;
+	else if( right > left)
+		return boolean + right;
+	else
+		return boolean;
+
+
+
+
+
+}
 // given a PRE & IN and  given a POST & IN unique binary tree is possible.
 
 
@@ -144,11 +174,16 @@ int main()
      
      printf("\nTotal Leaf Nodes : %d",leaf_count);
 
-     printf("\n");
-
      int full_node = count_full_nodes(root);
 
      printf("\nTotal Full Nodes : %d",full_node);
+
+
+     int height = height_of_tree(root);
+
+     printf("\nHeight of tree : %d",height);
+
+
      printf("\n");
 
      return 0;

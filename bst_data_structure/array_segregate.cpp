@@ -58,7 +58,7 @@ void Naive_approach(int arr[], int arr_size){
 
 int main()
 {
-    int arr[] = {0, 0, 1, 0, 0, 1};
+    int arr[] =  {0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0,0, 0, 0, 0, 0, 1, 0, 1, 0, 0 , 0, 1, 1, 1, 1, 1, 1, 1,1 ,1, 1, 1, 0};
     int i, arr_size = sizeof(arr)/sizeof(arr[0]);
  
     // segregate(arr, arr_size);
@@ -67,7 +67,7 @@ int main()
  
     printf("\nArray after segregation: \n");
 
-    for (i = 0; i < 6; i++)
+    for (i = 0; i < arr_size; i++)
         printf("%d ", arr[i]);
 
     printf("\n");

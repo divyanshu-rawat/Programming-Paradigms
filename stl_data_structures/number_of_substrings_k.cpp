@@ -5,6 +5,8 @@ using namespace std;
  
 // Function to count number of substrings
 // with exactly k unique characters
+
+/*
 int countkDist(string str, int k)
 {
     int n = str.length();
@@ -47,12 +49,55 @@ int countkDist(string str, int k)
  
     return res;
 }
+
+
+*/
+
+
+int countkDist(string str,int k){
+
+    int n = str.length();
+    int count[26];
+    int result = 0;
+    
+
+
+    for(int i=0;i<n;i++){
+
+        int unique = 0;
+        memset(count,0,sizeof(count));
+    
+
+    for(int j=i;j<n;j++){
+
+        if( count[str[j] - 'a'] == 0){
+            count[str[j] - 'a'] = 1 ;
+            unique++;
+        }
+        else
+        {
+            count[j]++;
+        }
+
+        if(unique == k){
+            result++;
+        }
+       
+    }
+
+}
+
+    return result;
+
+}
+
+
  
 // Driver Program
 int main()
 {
-    string str = "aba";
-    int k = 2;
+    string str = "abcbaa";
+    int k = 3;
     cout << "Total substrings with exactly "
          << k <<" distinct characters :"
          << countkDist(str, k) << endl;

@@ -106,11 +106,30 @@ int findMissing(int arr[], int size)
  */
 
 
+int Naive_approach(int arr[],int size){
+
+  unordered_set <int> set;
+
+
+  for(int j=0;j<size;j++){
+    set.insert(arr[j]);
+  }
+
+  for(int j=0;j<size;j++){
+      
+      if(set.find(j) == set.end()){
+          return j;
+      }
+  }
+
+}
+
+
 int main()
 {
-  int arr[] = {7,9,10};
+  int arr[] = {0, 10, 2, -10, -20};
   int arr_size = sizeof(arr)/sizeof(arr[0]);
-  int missing = findMissing(arr, arr_size);
+  int missing = Naive_approach(arr, arr_size);
   printf("The smallest positive missing number is %d \n", missing);
  
   return 0;

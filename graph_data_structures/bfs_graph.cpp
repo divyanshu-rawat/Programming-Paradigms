@@ -20,7 +20,7 @@ public:
 Graph:: Graph(int V){
 
 	this->V = V;
-	adj = new list <int>[V];
+	this->adj = new list <int>[V];
 }
 
 void Graph:: addEdge(int v,int w){
